@@ -1,0 +1,11 @@
+email: land@l4nd.com
+fullname: 'Land Smith-Abbinante'
+title: Webmaster
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$XtJ6NFXOULCE418kXGIG6e2qEkiT6XwzFb8O59LVYc2ATUqOM8lFC

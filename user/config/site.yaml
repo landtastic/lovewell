@@ -1,0 +1,21 @@
+title: LOVEWELL
+author:
+  name: lovewell
+  email: l4nd@yahoo.com
+#taxonomies:
+#  - category
+#  - tag
+metadata:
+  description: 'A unique Mind + Body Enrichment Center focused on helping people develop more loving, fulfilling and authentic relationships with themselves and others.'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog
+#menu:
+#    - text: MEMBERSHIP
+#      url: #
+#    - text: TEAM
+#      url: #

@@ -1,0 +1,564 @@
+// Your custom SCSS should be written here...
+
+.grav-lightslider {
+    .lSSlideOuter {
+        .lSPager.lSpg {
+            > li a {
+                z-index: 1;
+            }
+        }
+    }
+}
+
+#body > script:first-child + .grav-lightslider {
+  margin-top: -3rem;
+}
+
+body {
+    -webkit-animation-delay: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes fontfix {
+    from { opacity: 1; }
+    to   { opacity: 1; }
+}
+
+
+/*.feature-items {display: none;}*/
+
+/*remove first HOME nav item */
+#panel > ul > li:nth-child(1) { display: none;}
+#navbar > ul > li:nth-child(1) { display: none;}
+
+/*remove members showcase from menu*/
+#navbar > ul > li:nth-child(4) > ul > li:nth-child(2) {
+    display:none;
+}
+
+#panel .navigation li ul li a {
+    font-size: 1rem;
+}
+
+#header.scrolled #navbar ul li a:hover {
+  color: #662558 !important;
+}
+#header.scrolled #navbar .subnav a:hover {
+  color: #fff !important;
+}
+
+//#body > div.modular-row.showcase.flush-top {
+#body {
+    min-height: 100vh;
+    padding-bottom: 0.1px;
+    overflow: hidden;
+    background-image: url(/lovewell/user/themes/antimatter/images/header_design.svg)!important;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-color: white;
+    background-repeat: no-repeat;
+    /*background-position: 0 0;*/
+    background-position: top left;
+    background-size: contain;
+    @include breakpoint(mobile-only) {
+        background-size: 210%;
+    }
+    @include breakpoint(tablet-range) {
+        background-size: 137%;
+    }
+    @include breakpoint(large-desktop) {
+        background-position: 0 0;
+        background-size: 100%;
+    }
+    @include breakpoint(large-desktop-range) {
+        background-size: 80%;
+    }
+}
+.modular .showcase {
+    background-color: initial!important;
+}
+
+#body > div.modular-row.showcase.animated.fadeInUp.start-anim {
+    @include breakpoint(large-desktop-range) {
+        padding-left:0;
+        padding-right:0;
+    }
+}
+#body > div.modular-row.showcase.animated.fadeInUp.start-anim > a {
+    @include breakpoint(large-desktop-range) {
+        padding-right: 7rem;
+    }
+}
+
+#header #logo {
+    @include breakpoint(desktop-range) {
+        font-size: 1.2em;
+    }
+    @include breakpoint(mobile-only) {
+        max-width: 200px!important;
+    }
+}
+
+#header #navbar ul.navigation li ul {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    color: $core-text;
+    border: 0;
+    border-top: 0;
+    min-width: 12rem;
+    text-align: left;
+    left: 10px;
+}
+
+/*
+#header.scrolled #navbar ul.navigation li a:hover {
+    color: white;
+}
+*/
+#header #navbar ul.navigation li ul li {
+    font-size: 1.0rem;
+}
+
+#header #navbar {
+    @include breakpoint(mobile-range) {
+        max-width: 200px;
+    }
+}
+@media only screen and (max-width: 1080px) {
+    #header #navbar { font-size:1.1em; }
+}
+
+#panel .navigation li ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 50px;
+}
+
+.conceptText {
+    color: #000;
+    font-size: smaller;
+    vertical-align: top;
+    margin-top: 40px;
+    width: 49%!important;
+    @include breakpoint(mobile-only) {
+        font-size: large!important;
+    }
+    @include breakpoint(large-desktop) {
+        width: 40%!important;
+    }
+    @include breakpoint(large-desktop-range) {
+        width: 35%!important;
+    }
+    text-align: justify;
+}
+
+.conceptText:first-of-type {
+    font-size: large;
+    line-height: 2.01;
+    letter-spacing: 1px;
+    border-right: 1px solid #b04198;
+    min-height: 200px;
+    padding-right: 20px;
+    @include breakpoint(large-desktop) {
+        padding-right: 40px;
+    }
+    @include breakpoint(large-desktop-range) {
+        padding-right: 40px;
+    }
+}
+.conceptText:nth-of-type(2) {
+    padding-left: 20px;
+    line-height: 1.5;
+     @include breakpoint(large-desktop) {
+        padding-left: 40px;
+    }
+    @include breakpoint(large-desktop-range) {
+        padding-left: 40px;
+    }   
+}
+.conceptText:nth-of-type(2) > br {
+    font-size:small;
+}
+
+.classesHeadLeft,.classesHeadRight {
+    color: #f09238; height: 15px; border-bottom: 1px solid #f09238; text-align: right; 
+}
+.classesHeadRight {
+    text-align: left;
+}
+
+.body1, .mind1 {
+  color: #f09238;
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+.mind1 {
+    text-align: left;
+}
+
+.classesHeadLeft:before {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+}
+
+.classesHeadLeft:before {
+  left: 0;
+}
+
+.classesHeadRight:after {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+}
+
+.classesHeadLeft:after {
+  right: 0;
+}
+
+.classesHLbig {
+    width:30%!important;
+    @include breakpoint(mobile-only) {
+        display:none;
+    }
+}
+.classesHLsm {
+    width:8%!important;
+    @include breakpoint(mobile-only) {
+        display:none;
+    }
+}
+
+.classesText p {
+    font-size: medium!important;
+}
+.classesText {
+    font-size:medium;
+    text-align: left;
+    color: #662558;
+    vertical-align: top;
+    margin-top: 40px;
+    width: 49%!important;
+    @include breakpoint(mobile-only) {
+        margin-top: 0px;
+        width: 100%!important;
+    }
+    @include breakpoint(large-desktop) {
+        width: 40%!important;
+    }
+    @include breakpoint(large-desktop-range) {
+        width: 35%!important;
+    }
+}
+.classesText:first-of-type {
+    text-align: right;
+    border-right: 1px solid #b04198;
+    min-height: 200px;
+    padding-right: 20px;
+    @include breakpoint(large-desktop) {
+        padding-right: 40px;
+    }
+    @include breakpoint(large-desktop-range) {
+        padding-right: 40px;
+    }
+}
+.classesText:nth-of-type(2) {
+    padding-left: 20px;
+    line-height: 1.5;
+     @include breakpoint(large-desktop) {
+        padding-left: 40px;
+    }
+    @include breakpoint(large-desktop-range) {
+        padding-left: 40px;
+    }   
+}
+
+.workshopText {
+    text-align: left;
+    padding: 40px;
+    font-size: medium;
+    max-width: 700px;
+}
+.workshopText p{
+    font-size: medium!important;
+}
+
+.studioBox {
+    color: #000;
+    font-size: smaller;
+    vertical-align: top;
+    text-align: justify;
+    max-width:100%;
+    max-width:700px;
+}
+.studioBox img {
+    padding:20px;
+}
+
+.ratesText {
+    color: #000;
+    text-align:left;
+    width:50%;
+    @include breakpoint(mobile-only) {
+        margin-top: 0px;
+        width: 100%!important;
+    }
+}
+
+.appText div{
+    color: #000;
+    text-align:justify;
+    padding: 10px;
+    /*width:50%;
+    max-width:700px;
+    @include breakpoint(mobile-only) {
+        margin-top: 0px;
+        width: 100%!important;
+    }
+    */
+}
+.appText img {
+    max-width: 300px;
+}
+
+.appText:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.is-no-padding {
+    padding: 0;
+}
+
+.is-no-margin {
+    margin: 0;
+}
+
+.dot-leader li {
+    list-style-type: none!important;
+}
+
+.dot-leader {
+    position: relative;
+    overflow: hidden; /* clip the dots */
+}
+
+.dot-leader__left {
+    position: relative;
+    display: inline-block;
+}
+
+.dot-leader__left::after {
+    color: #000;
+    content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+    font-weight: normal;
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap; /* only needed when content has spaces */
+    margin-left: 5px; /* space left of dots */
+}
+
+.dot-leader__right {
+    background: rgba(231, 232, 232, 0.8);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding-left: 5px; /* space right of dots */
+    padding-right: 5px;
+}
+
+
+.membership-page #body > div:nth-child(4) {
+    display: block;
+    min-height: 1220px!important;
+}
+
+
+#body > div:nth-child(4) > div.pure-g > div:nth-child(1) > img:nth-child(3) {
+    margin-top: -5px;
+    @include breakpoint(no-mobile) {
+        margin-top: 5px;
+    }
+    @include breakpoint(tablet-range) {
+        margin-top: -5px;
+    }
+}
+
+#body > div.modular-row.features.small.animated.fadeInUp.start-anim > div.pure-g-r > div:nth-child(2) {
+    font-size: large;
+}
+
+@media only screen and (max-width: 768px) {
+    .conceptText:first-of-type { border:0; }
+    .conceptText { width: 100%!important; }
+}
+
+.modular .showcase .button {
+    border:none!important;
+    float: right;
+}
+
+h2 { color: #b04198 !important; letter-spacing: 1px;}
+
+.pure-g:first-of-type { display: initial;}
+
+#body > div.modular-row.showcase.flush-top > a {
+    display: block;
+    text-align: right;
+}
+
+#body > div.modular-row.features.small.animated.fadeInUp.start-anim > p:nth-child(2) > img {
+    border-color: white;
+    border-right-width: 4px;
+    border-style: solid;
+}
+
+/*#body > div:nth-child(6) > h2 {
+   text-align: right;
+}*/
+#body > div:nth-child(6) img, .product-footer { width:100% }
+.product-footer { margin-bottom: -69px;}
+
+
+.modular .features {
+    padding: 4rem 0!important;
+}
+.product-grid { width: initial!important;}
+
+#body > div.modular-row.features.small.animated.fadeInUp.start-anim > p:nth-child(4) {padding:0;}
+
+
+/*************************** animation ***************************/
+
+.animated {
+    -webkit-animation-fill-mode:both;
+    -moz-animation-fill-mode:both;
+    -ms-animation-fill-mode:both;
+    -o-animation-fill-mode:both;
+    animation-fill-mode:both;
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    -ms-animation-duration:1s;
+    -o-animation-duration:1s;
+    animation-duration:1s;
+    opacity:0;                /*** Important Bit ***/
+}
+.animated.hinge {
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    -ms-animation-duration:2s;
+    -o-animation-duration:2s;
+    animation-duration:2s;
+}
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+@-o-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -o-transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -o-transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    -moz-animation-name: fadeInUp;
+    -o-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+@-webkit-keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+    }
+}
+@-moz-keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: translateY(20px);
+    }
+}
+@-o-keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        -o-transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -o-transform: translateY(20px);
+    }
+}
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+.fadeOutDown {
+    -webkit-animation-name: fadeOutDown;
+    -moz-animation-name: fadeOutDown;
+    -o-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+}
+
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
